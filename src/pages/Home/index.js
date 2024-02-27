@@ -1,8 +1,11 @@
 import Pokelist from "../../Components/Pokelist";
+import Header from "../../Components/Header";
+
 import { useState, useEffect } from "react";
 function Home () {
 
     const [pokemons, setPokemons ] = useState([]);
+    const [quatidade, setQuantidade] = useState([]);
 
     useEffect(() => {
         fetchPokemon();
@@ -23,11 +26,12 @@ function Home () {
             })
     }
     return (
-        <>
+        <div className={StyleSheet.container}>
+            <Header setQuantidade={setQuantidade}/>
             <Pokelist pokemons={pokemons}/>
 
 
-        </>
+        </div>
     )
 }
 
