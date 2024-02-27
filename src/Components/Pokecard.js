@@ -1,9 +1,10 @@
 import styles from './Pokecard.module.css'
 
-function Pokecard() {
+function Pokecard({pokemon}) {
     return(
         <div className={styles.card}>
-            <h2>{}</h2>
+            <h2>{pokemon.name}</h2>
+            <img src={pokemon.sprites.front_default} alt={pokemon.name}></img>
             <h3>{}</h3>
         </div>
     )

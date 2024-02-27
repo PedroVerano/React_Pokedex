@@ -1,10 +1,15 @@
 import Pokecard from "./Pokecard";
+import styles from './Pokelist.module.css'
 
-function Pokelist(props) {
+function Pokelist({pokemons}) {
     return(
-        <ul>
-            {
-                <Pokecard></Pokecard>
+        <ul className={styles.pokelist}>
+            {pokemons.map(pokemon => {
+                return(
+                    <Pokecard key={pokemon.id} pokemon={pokemon}/>
+                )
+            })
+              
             }
         </ul>
     )
