@@ -5,17 +5,19 @@ import { useState, useEffect } from "react";
 function Home () {
 
     const [pokemons, setPokemons ] = useState([]);
-    const [quatidade, setQuantidade] = useState([]);
+    const [quantidade, setQuantidade] = useState([]);
 
     useEffect(() => {
-        fetchPokemon();
+        fetchPokemon(152,setPokemons);
     }, []);
 
-    const fetchPokemon = () => {
+    const fetchPokemon = (quantidade, setPokemons) => {
         const getPokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`
-
+        if (quantidade == null) {
+            quantidade = 152;
+        }
         const pokemonsPromises = [];
-        for(let i=1; i<152; i++) {
+        for(let i=1; i<quantidade; i++) {
             pokemonsPromises.push(fetch(getPokemonUrl(i)).then(resonse => resonse.json()));
         }
 
@@ -27,7 +29,7 @@ function Home () {
     }
     return (
         <div className={StyleSheet.container}>
-            <Header setQuantidade={setQuantidade}/>
+            <Header setPokemons={setPokemons} />
             <Pokelist pokemons={pokemons}/>
 
 

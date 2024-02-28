@@ -1,10 +1,15 @@
 .header{
+    position: sticky;
+    top:0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3rem;
+    padding: 1rem 0 1rem;
+    background-color: rgb(185, 39, 39);
 }
 
 .busca{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
