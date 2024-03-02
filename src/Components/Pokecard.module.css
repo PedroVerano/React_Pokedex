@@ -17,3 +17,24 @@
     width: 160px
 
 }
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.info p, h2, h3{
+    margin-top: 5px;
+}
+
+.circle { 
+    position: absolute;
+    margin-bottom: 70px;
+    z-index: 0;
+    width: 130px;
+    height: 130px;
+    border-radius: 70px;
+    background-color: rgb(115, 179, 52);
+ }

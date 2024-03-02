@@ -22,10 +22,13 @@ function Pokecard({pokemon}) {
             }
     return(
         <div className={styles.card}>
-            <img src={pokemon2.image} alt={pokemon.name}></img>
-            <p>#{id}</p>
-            <h2>{pokemon2.name}</h2>
-            <h3>{pokemon2.type2 ? pokemon2.type1 + ' | ' + pokemon2.type2: pokemon2.type1}</h3>
+            <div className={styles.circle}></div>
+            <div className={styles.info}>
+                <img src={pokemon2.image} alt={pokemon.name}></img>
+                <p>#{id}</p>
+                <h2>{pokemon2.name}</h2>
+                <h3>{pokemon2.type2 ? pokemon2.type1 + ' | ' + pokemon2.type2: pokemon2.type1}</h3>
+            </div>
         </div>
     )
 }
