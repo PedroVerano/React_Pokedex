@@ -1,8 +1,9 @@
-import { type } from '@testing-library/user-event/dist/type';
+import style from './Pokecard.css'
 import styles from './Pokecard.module.css'
 
 function Pokecard({pokemon}) {
     console.log(pokemon)
+    const { grass } = styles
     const { id, name, height, sprites, types, weight, abilities } = pokemon;
             const typesNames = [];
 
@@ -20,9 +21,12 @@ function Pokecard({pokemon}) {
                     abilities
 
             }
+
+            const type = `${pokemon2.type1}`
+            console.log(type)
     return(
         <div className={styles.card}>
-            <div className={styles.circle}></div>
+            <div className={type}></div>
             <div className={styles.info}>
                 <img src={pokemon2.image} alt={pokemon.name}></img>
                 <p>#{id}</p>

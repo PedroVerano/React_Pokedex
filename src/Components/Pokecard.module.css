@@ -17,6 +17,7 @@
     width: 160px
 
 }
+
 .info{
     display: flex;
     flex-direction: column;
@@ -29,12 +30,23 @@
     margin-top: 5px;
 }
 
-.circle { 
+.grass { 
     position: absolute;
     margin-bottom: 70px;
     z-index: 0;
     width: 130px;
     height: 130px;
     border-radius: 70px;
-    background-color: rgb(115, 179, 52);
+    background-color: #78c850
  }
+
+ .fire { 
+    position: absolute;
+    margin-bottom: 70px;
+    z-index: 0;
+    width: 130px;
+    height: 130px;
+    border-radius: 70px;
+    background-color: #f05030
+ }
+ 
