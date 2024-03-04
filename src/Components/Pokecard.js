@@ -1,9 +1,10 @@
 import style from './Pokecard.css'
 import styles from './Pokecard.module.css'
+import { Link } from 'react-router-dom';
+import Types from './Types';
 
 function Pokecard({pokemon}) {
-    console.log(pokemon)
-    const { grass } = styles
+
     const { id, name, height, sprites, types, weight, abilities } = pokemon;
             const typesNames = [];
 
@@ -22,16 +23,15 @@ function Pokecard({pokemon}) {
 
             }
 
-            const type = `${pokemon2.type1}`
-            console.log(type)
+            const type = pokemon2.type1
     return(
         <div className={styles.card}>
             <div className={type}></div>
             <div className={styles.info}>
-                <img src={pokemon2.image} alt={pokemon.name}></img>
+                <Link to={`/details/${name}`}> <img src={pokemon2.image} alt={pokemon.name}></img> </Link>
                 <p>#{id}</p>
                 <h2>{pokemon2.name}</h2>
-                <h3>{pokemon2.type2 ? pokemon2.type1 + ' | ' + pokemon2.type2: pokemon2.type1}</h3>
+                <Types type1={pokemon2.type1} type2={pokemon2.type2}></Types>
             </div>
         </div>
     )

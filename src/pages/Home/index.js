@@ -23,16 +23,13 @@ function Home () {
 
         Promise.all(pokemonsPromises)
             .then(pokemons => {
-                console.log(pokemons)
                 setPokemons(pokemons);
             })
     }
     return (
-        <div className={StyleSheet.container}>
+        <div>
             <Header setPokemons={setPokemons} />
             <Pokelist pokemons={pokemons}/>
-
-
         </div>
     )
 }

@@ -1,0 +1,167 @@
+.typesDiv{
+    display: flex;
+    justify-content: cent;
+    align-items: center;
+}
+
+.link{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.corwater { 
+
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #6890f0;
+    margin-bottom: 0.3rem;
+ }
+
+ .corgrass { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #78c850;
+    margin-bottom: 0.3rem;
+    text-decoration: none;
+ }
+
+.corfire { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #f05030;
+    margin-bottom: 0.3rem;
+ }
+
+.corelectric { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #f8d030;
+    margin-bottom: 0.3rem;
+ }
+
+.corpsychic { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #f85888;
+    margin-bottom: 0.3rem;
+ }
+
+.cordragon { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #1538f8;
+    margin-bottom: 0.3rem;
+ }
+
+.corice { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #98d8d8;
+    margin-bottom: 0.3rem;
+ }
+
+.cordark { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #155848;
+    margin-bottom: 0.3rem;
+ }
+
+ .cornormal { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #a8a878;
+    margin-bottom: 0.3rem;
+ }
+ 
+.corfighting { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #903028;
+    margin-bottom: 0.3rem;
+ }
+ 
+
+.corflying { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #a890f0;
+    margin-bottom: 0.3rem;
+ }
+ 
+
+.corpoison { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #a040a0;
+    margin-bottom: 0.3rem;
+ }
+ 
+
+.corground { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #e0c068;
+    margin-bottom: 0.3rem;
+ }
+
+.corrock { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #b8a038;
+    margin-bottom: 0.3rem;
+ }
+
+.corbug { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #a8b820;
+    margin-bottom: 0.3rem;
+} 
+
+.corghost { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #155898;
+    margin-bottom: 0.3rem;
+}
+
+.corunknown { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #68a090;
+    margin-bottom: 0.3rem;
+}
+
+.corsteel { 
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #b8b8d0;
+    margin-bottom: 0.3rem;
+}
+
+.corfairy {
+    margin-right: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 15px;
+    background-color: #e98eda;
+    margin-bottom: 0.3rem;
+}

@@ -2,13 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './global.css';
 import Home from './Pages/Home';
+import Details from './Pages/Details'
+import TypeList from './Pages/TypeList/TypeList';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Home />
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='/details/:name' element={<Details/>}/>
+      <Route path='/search/:type' element={<TypeList/>}/>
+    </Routes>
   </BrowserRouter>
 );
 
