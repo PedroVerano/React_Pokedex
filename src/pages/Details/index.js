@@ -29,7 +29,6 @@ function Details() {
                     abilities
 
             }
-            console.log(pokemon)
             setPokemon(pokemon);
         })
     }

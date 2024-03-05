@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 function Home () {
 
     const [pokemons, setPokemons ] = useState([]);
-    const [quantidade, setQuantidade] = useState([]);
+    
 
     useEffect(() => {
         fetchPokemon(152,setPokemons);
