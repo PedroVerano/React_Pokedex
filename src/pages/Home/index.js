@@ -28,7 +28,7 @@ function Home () {
     }
     return (
         <div>
-            <Header setPokemons={setPokemons} />
+            <Header setPokemons={setPokemons} ativo={true} />
             <Pokelist pokemons={pokemons}/>
         </div>
     )

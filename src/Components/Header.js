@@ -1,44 +1,55 @@
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react'; 
-function Header({setPokemons}) {
+import placeholderValue from '../Functions/placeholderValue';
+import fetchPokemon from '../Functions/fetchPokemon';
 
-    const [quantidade, setQuantidade] = useState([]);
+function Header({setPokemons, ativo}) {
 
-    const fetchPokemon = (quantidade, setPokemons) => {
-        const getPokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`
-        if (quantidade == null) {
-            quantidade = 152;
-        }
+    const [value, setQuantidade] = useState([]);
+    const [valueSelect, setValueSelect] = useState('quantidade');
 
-        const contador = Number(quantidade) + 1;
-        if(contador > 1000 ) {
-            alert('Maximo de pokemons são 1000')
-            return
-        }
-        if ( quantidade === "" || quantidade === "0") return alert('Coloque um numero de 1 a 1000')
+    // const fetchPokemon = (quantidade, setPokemons) => {
+    //     const getPokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`
+    //     if (quantidade === null || quantidade == 0) {
+    //         quantidade = 151;
+    //     }
 
-        console.log(contador);
-        const pokemonsPromises = [];
-        for(let i=1; i<contador; i++) {
-            pokemonsPromises.push(fetch(getPokemonUrl(i)).then(resonse => resonse.json()));
-        }
+    //     const contador = Number(quantidade) + 1;
+    //     if(contador > 1000 ) {
+    //         alert('Maximo de pokemons são 1000')
+    //         return
+    //     }
+    //     if ( quantidade === "" || quantidade === "0") return alert('Coloque um numero de 1 a 1000')
 
-        Promise.all(pokemonsPromises)
-            .then(pokemons => {
-                setPokemons(pokemons);
-            })
-    }
+    //     console.log(contador);
+    //     const pokemonsPromises = [];
+    //     for(let i=1; i<contador; i++) {
+    //         pokemonsPromises.push(fetch(getPokemonUrl(i)).then(resonse => resonse.json()));
+    //     }
+
+    //     Promise.all(pokemonsPromises)
+    //         .then(pokemons => {
+    //             setPokemons(pokemons);
+    //         })
+    // }
 
     return(
         
         <div className={styles.header}>
              <Link className='link' to={`/`}><h1>Pokedex</h1></Link>
-            <div className={styles.busca} >
+            <div className={ativo ? styles.busca : styles.busca+ ' ' + styles.hides } >
             <input type='text' 
-                placeholder='Qual a quantntidade que deseja pesquisar ?' 
+                placeholder={placeholderValue(valueSelect)}
                 onChange={(e) => setQuantidade(e.target.value)}/>
-            <button onClick={()=> fetchPokemon(quantidade, setPokemons)}>Pesquisar</button>
+                <select value={valueSelect}    onChange={(event)=> setValueSelect(event.target.value)}>
+                    <option value='quantidade'>Quantidade</option>
+                    <option value='id'>ID</option>
+                    <option value='type'>Type</option>
+                    <option value='name'>Name</option>
+
+                </select>
+            <button onClick={()=> fetchPokemon(value, valueSelect, setPokemons)}>Pesquisar</button>
             </div>
             {/* Logo ou contatos */}
         </div>
