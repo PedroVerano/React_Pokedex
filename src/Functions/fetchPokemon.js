@@ -34,16 +34,6 @@ const fetchPokemon = (value, selectValue, setPokemons) => {
                     setPokemons(pokemons);
                 })
             return ;
-        case 'name':
-            const pokemonsPromisesName = [];
-            const getPokemonUrlName = name => `https://pokeapi.co/api/v2/pokemon/${name}`
-            pokemonsPromisesName.push(fetch(getPokemonUrlName(value)).then(response => response.json()));
-
-            Promise.all(pokemonsPromisesName)
-                .then(pokemons => {
-                    setPokemons(pokemons);
-                })
-            return ;
         case 'type':
                 const getPokemonUrlType = type => `https://pokeapi.co/api/v2/type/${type}`;
                 const pokemonsPromises2 = [];

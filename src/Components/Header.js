@@ -9,31 +9,6 @@ function Header({setPokemons, ativo}) {
     const [value, setQuantidade] = useState([]);
     const [valueSelect, setValueSelect] = useState('quantidade');
 
-    // const fetchPokemon = (quantidade, setPokemons) => {
-    //     const getPokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`
-    //     if (quantidade === null || quantidade == 0) {
-    //         quantidade = 151;
-    //     }
-
-    //     const contador = Number(quantidade) + 1;
-    //     if(contador > 1000 ) {
-    //         alert('Maximo de pokemons são 1000')
-    //         return
-    //     }
-    //     if ( quantidade === "" || quantidade === "0") return alert('Coloque um numero de 1 a 1000')
-
-    //     console.log(contador);
-    //     const pokemonsPromises = [];
-    //     for(let i=1; i<contador; i++) {
-    //         pokemonsPromises.push(fetch(getPokemonUrl(i)).then(resonse => resonse.json()));
-    //     }
-
-    //     Promise.all(pokemonsPromises)
-    //         .then(pokemons => {
-    //             setPokemons(pokemons);
-    //         })
-    // }
-
     return(
         
         <div className={styles.header}>
@@ -44,9 +19,8 @@ function Header({setPokemons, ativo}) {
                 onChange={(e) => setQuantidade(e.target.value)}/>
                 <select value={valueSelect}    onChange={(event)=> setValueSelect(event.target.value)}>
                     <option value='quantidade'>Quantidade</option>
-                    <option value='id'>ID</option>
+                    <option value='id'>ID ou Nome</option>
                     <option value='type'>Type</option>
-                    <option value='name'>Name</option>
 
                 </select>
             <button onClick={()=> fetchPokemon(value, valueSelect, setPokemons)}>Pesquisar</button>
